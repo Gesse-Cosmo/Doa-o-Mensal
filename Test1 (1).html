@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
+
+        div#nm {
+            background-image: url(comunidademarianaboasemente.png);
+            background-color: rgba(8, 109, 139, 0.822);
+            background-size: 170px 150px;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 170px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            margin-top: -85px;
+            margin-left: -100px;
+
+            
+        }
+        input#calc {
+            position: relative;
+            margin: 3.25px;
+            margin-top: 5px;
+            margin-left: 8px;
+            width: 150px;
+            background: rgba(255, 252, 252, 0.795);
+            text-align: center;
+            font-weight: bold;
+            
+                    
+        }
+        input#bt {
+            position: relative;
+            margin-top: 11px;
+            margin-left: 50px;
+            box-shadow: 0px 0px 10px rgb(0,0,0,.5);
+            background: rgba(39, 27, 3, 0.849);
+            color: rgb(255, 255, 255)
+            
+        }
+        div#res {
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 150px;
+            height: 80px;
+            background: rgba(184, 233, 248, 0.925);
+            box-shadow: 0px 0px 20px rgb(0,0,0,.5);
+            
+            
+        }
+        h1 {
+            font-size: 7pt;
+            font-family: 'Didact Gothic', sans-serif;
+            /*font-family: 'Noto Sans HK', sans-serif;
+            font-family: Arial, Helvetica, sans-serif;*/
+            text-align: center;
+            margin: 5px 2px 2px 2px;
+            font-weight: normal;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div id="nm">
+        <h1>Digite o valor do que você recebe</h1>
+    <input type="number" name="calc" id="calc">
+    <input type="button" value="Calcular" id="bt" onclick="calc()">
+    <div id="res">
+        <h1>Resultado</h1>
+    </div>
+    </div>
+    <script>
+        function calc() {
+            var a = window.document.getElementById('calc')
+            var n = Number (a.value)
+            var p40 = (n*0.4).toFixed(2)
+            var p60 = (n*0.6).toFixed(2)
+            
+           
+            res.innerHTML = `<h1>Sua <strong> Doação Mensal é R$ ${p60} </strong> e </br> seu <strong> Dízimo Paroquial é R$ ${p40}</strong>. </br> 
+            Seja fiel no pouco!</br>Que Deus te abençoe e Maria te guarde!</h1>`
+        }
+    </script>
+</body>
+</html>
